@@ -11,6 +11,12 @@ cask "better-monitor" do
 
   app "Better Monitor.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Better Monitor.app"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/Application Support/Better Monitor",
     "~/Library/Caches/dev.leo.better-monitor",
