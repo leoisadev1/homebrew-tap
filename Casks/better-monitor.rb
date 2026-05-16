@@ -1,0 +1,20 @@
+cask "better-monitor" do
+  version "0.1.0"
+  sha256 "3838683293421ceb2c97a4f09ecd9c9fcb19d15e98b692b8a5967b1c7cbcf974"
+
+  url "https://github.com/leoisadev1/better-monitor/releases/download/v#{version}/Better-Monitor-#{version}.zip"
+  name "Better Monitor"
+  desc "Native macOS system monitor built with SwiftUI and AppKit"
+  homepage "https://github.com/leoisadev1/better-monitor"
+
+  depends_on macos: ">= :sonoma"
+
+  app "Better Monitor.app"
+
+  zap trash: [
+    "~/Library/Application Support/Better Monitor",
+    "~/Library/Caches/dev.leo.better-monitor",
+    "~/Library/Preferences/dev.leo.better-monitor.plist",
+    "~/Library/Saved Application State/dev.leo.better-monitor.savedState",
+  ]
+end
