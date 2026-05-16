@@ -1,6 +1,6 @@
 cask "better-monitor" do
-  version "0.1.4"
-  sha256 "f5361f97aa3c0e0c7c0d03d83d3165950303d311a6cbd0446d0cf28608fe3663"
+  version "0.1.5"
+  sha256 "db6f896b281573b159c1f885ba0b5b049c9a7b695007dc027ce823a7a3232986"
 
   url "https://github.com/leoisadev1/better-monitor/releases/download/v#{version}/Better-Monitor-#{version}.zip"
   name "Better Monitor"
